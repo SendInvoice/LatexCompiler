@@ -22,10 +22,10 @@ stop:
 	docker rm $(docker stop $(docker ps -a --filter ancestor=latex_compiler --format="{{.ID}}"))
 
 publish-image: build-image
-	docker tag latex_compiler:$(COMMIT) ghcr.io/sendcv/latex_compiler:$(COMMIT)
-	docker tag latex_compiler:$(COMMIT) ghcr.io/sendcv/latex_compiler:latest
-	docker push ghcr.io/sendcv/latex_compiler:$(COMMIT)
-	docker push ghcr.io/sendcv/latex_compiler:latest
+	docker tag latex_compiler:$(COMMIT) ghcr.io/sendinvoice/latex_compiler:$(COMMIT)
+	docker tag latex_compiler:$(COMMIT) ghcr.io/sendinvoice/latex_compiler:latest
+	docker push ghcr.io/sendinvoice/latex_compiler:$(COMMIT)
+	docker push ghcr.io/sendinvoice/latex_compiler:latest
 
 current-tag:
 	@echo $(COMMIT)

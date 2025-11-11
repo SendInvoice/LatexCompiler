@@ -9,7 +9,7 @@
 1. Pull and Run the Image
 
 ```bash
-docker pull ghcr.io/sendcv/latex_compiler:latest
+docker pull ghcr.io/sendinvoice/latex_compiler:latest
 docker run -p 3000:3000 latex_compiler
 ```
 
